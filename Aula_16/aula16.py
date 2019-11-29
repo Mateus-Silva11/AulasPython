@@ -1,12 +1,19 @@
-from faixa import criar_faixa , salvar_faixa
+from faixa import criar_faixa , salvar_faixa , ler_faixa
 
-musica = input('digite uma musica')
-artista = input('digite o nome do artiste')
-album = input('digite o nome do album')
+for linha in range(1,3):
 
-faixa = criar_faixa(musica,artista,album)
-salvar_faixa(faixa)
+    print('+'*50)
+    print('\n')
+    musica = input('digite uma musica')
+    artista = input('digite o nome do artiste')
+    album = input('digite o nome do album')                     
+    print('\n')
+    print('+'*50)
+    
+    
+    faixa = criar_faixa(musica,artista,album)
+    salvar_faixa(faixa)
+    ler = ler_faixa()
 
-print(f'Faixa criada: {faixa} ')
-
-
+for linha in ler:
+    print(f" Nome da Musica: {linha['Musica']} - Nome do Artista: {linha['Artista']} - Nome do Album {linha['Album']} ")
