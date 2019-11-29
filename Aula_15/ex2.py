@@ -7,16 +7,15 @@ dicionario_cerveja = {'Nome':nome_c ,'Marca':marca_c , 'Tipo':tipo , 'Teor':teor
 
 #manipulando dado para adicionar no arquivo(Cervejaria.txt) metodo
 def salvar_cerveja(dicionario_cerveja):
-    arquivo = open('Cervejaria.txt','a')
+    arquivo = open('Aula_15/Cervejaria.txt','a')
     arquivo.write(f" {dicionario_cerveja['Nome']}; {dicionario_cerveja['Marca']}; {dicionario_cerveja['Tipo']} ; {dicionario_cerveja['Teor']} \n")
     arquivo.close()
-
 #Impreção Metodo
 def leitura():
     #criação da lista
     lista = []
     #abrindo o arquivo .txt em modo leitura ('R')
-    arquivo = open('Cervejaria.txt', 'r')
+    arquivo = open('Aula_15/Cervejaria.txt', 'r')
     #criando um for para mostra todos os arquivos que estao no txt
     for linha in arquivo:   
         #linha.strinp() função utilizada para remove caracter da string exemplo \n
@@ -31,10 +30,8 @@ def leitura():
     arquivo.close()
     #retornando a lista com os dados do dicionario
     return lista
-
 #Parte onde Salva no arquivo .txt
 salvar_cerveja(dicionario_cerveja)
-
 #Parte onde faiz a leitura dos dados do arquivo .txt
 for d in leitura():
     print(f" Nome Cerveja:{d['Nome']} Marca: {d['Marca']} Tipo : {d['Tipo']} Teor: {d['Teor']}  ")
