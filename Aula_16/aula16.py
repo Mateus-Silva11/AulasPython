@@ -16,4 +16,4 @@ for linha in range(1,3):
     ler = ler_faixa()
 
 for linha in ler:
-    print(f" Nome da Musica: {linha['Musica']} - Nome do Artista: {linha['Artista']} - Nome do Album {linha['Album']} ")
+    print(f" {linha}° faixa : Nome da Musica: {linha['Musica']} - Nome do Artista: {linha['Artista']} - Nome do Album {linha['Album']} ")
