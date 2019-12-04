@@ -16,7 +16,7 @@ print(f'{cadastro_cliente(nuemro)}')
 #Criar um função para salvar em arquivo 
 
 arquivo = open('Aula_17/Clientes.txt','a')
-for cliente in arquivo :
+    
 
 
 arquivo.close()
