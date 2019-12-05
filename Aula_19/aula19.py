@@ -21,7 +21,7 @@
 
 
 def ler_cadastro():
-   arquivo = open('Aula_19/Cadastro.txt','r')
+   arquivo = open('Aula_19/cadastro.txt','r')
    lista = []
    for pessoas in arquivo:
       pessoas = pessoas.strip().split(';')
