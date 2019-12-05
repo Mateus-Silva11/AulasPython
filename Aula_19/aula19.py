@@ -21,7 +21,7 @@
 
 
 def ler_cadastro():
-   arquivo = open('18-Aula18/exercicios/cadastro.txt','r')
+   arquivo = open('Aula_19/Cadastro.txt','r')
    lista = []
    for pessoas in arquivo:
       pessoas = pessoas.strip().split(';')
@@ -71,4 +71,3 @@ lista_festa(lista1)
 while True:
    a=int(input('Digite um numero: '))
    consulta(lista1,a)
-   
