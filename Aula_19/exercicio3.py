@@ -52,23 +52,23 @@ arquivo_maior.close()
 arquivo_menor.close()
 
 # 3 - Crie uma função que conte quantas mulheres e quantos homens tem na lista. Salve cada um em um arquivo diferente.
-# def Contar():
-#     cont_m = 0
-#     cont_f = 0
-#     for dicionario in lista_ler:
-#         if dicionario['Sexo']== 'm':
-#             cont_m += 1
-#             print(f' Homem: {cont_m}')
-#         else:
-#             cont_f += 1
-#             print(f' Mulher {cont_f}')
-# Contar()
-def a(lista_ler):
-    lista = []
+def contador(lista_ler):
+    arquivo_homem = open('Aula_19/Homem.txt','w')
+    arquivo_mulher = open('Aula_19/Mulheres.txt','w')
+    contador_m = 0
+    contador_f = 0
     for dicionario in lista_ler:
-        if dicionario['Sexo'] == 'm':
-            a=dicionario['Sexo'].count('m')
-            lista.append(a)
-            print(len(lista))
+        if dicionario['Sexo'] == 'm':      
+            arquivo_homem.write(f"{dicionario['Id']};{dicionario['Nome']};{dicionario['Idade']};{dicionario['Sexo']};{dicionario['E-mail']};{dicionario['Telefone']}\n")
+            contador_m += 1
+        else:   
+            arquivo_mulher.write(f"{dicionario['Id']};{dicionario['Nome']};{dicionario['Idade']};{dicionario['Sexo']};{dicionario['E-mail']};{dicionario['Telefone']}\n")
+            contador_f += 1
+    arquivo_homem.close()
 
-a(lista_ler)            
+    return f' Quantidade de Homens : {contador_m} , Quantidade de Mulheres : {contador_f}'
+
+print(contador(lista_ler))
+
+#4 - Faça uma função de consulta de cadastro. A função deve receber o valor do código do cliente e deve imprimir na 
+# tela os dados do cliente com f-string usando a lista do exercicio 1
