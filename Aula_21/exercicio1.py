@@ -15,5 +15,23 @@
 # por zero.
 
 
+controle = 'n'
 
+while controle != 's':
+    try:    
+    
+        n1 = int(input('Informe um numero'))
+        n2 = int(input('Informe outro numero'))
+        print(f'A soma entre {n1} + {n2} é = {n1+n2}')  
+        print(f'A multiplicação entre {n1} * {n2} é = {n1*n2}')
+        print(f'A divição entre {n1} / {n2} é = {n1/n2}')
+        print(f'A subtração entre {n1} - {n2} é = {n1-n2}')
+    
+    except ValueError:  
+       print('Digite o Numero Novamente (obs: Nuemro inteiro)')
+    
+    except ZeroDivisionError:  
+        print('Impossivel fazer a divição com 0')
 
+    else:      
+        controle = input('Desseja Parar?')
