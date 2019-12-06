@@ -63,12 +63,21 @@ arquivo_menor.close()
 #             cont_f += 1
 #             print(f' Mulher {cont_f}')
 # Contar()
-def a(lista_ler):
-    lista = []
-    for dicionario in lista_ler:
-        if dicionario['Sexo'] == 'm':
-            a=dicionario['Sexo'].count('m')
-            lista.append(a)
-            print(len(lista))
+def contador(lista_ler):
 
-a(lista_ler)            
+    arquivo_homem = open('Aula_19/Homem.txt','w')
+    arquivo_mulher = open('Aula_19/Mulheres.txt','w')
+    contador_m = 0
+    contador_f = 0
+    for dicionario in lista_ler:
+        if dicionario['Sexo'] == 'm':      
+            arquivo_homem.write(f"{dicionario['Id']};{dicionario['Nome']};{dicionario['Idade']};{dicionario['Sexo']};{dicionario['E-mail']};{dicionario['Telefone']}\n")
+            contador_m += 1
+        else:   
+            arquivo_mulher.write(f"{dicionario['Id']};{dicionario['Nome']};{dicionario['Idade']};{dicionario['Sexo']};{dicionario['E-mail']};{dicionario['Telefone']}\n")
+            contador_f += 1
+    arquivo_homem.close()
+    
+    return f' Homem {contador_m} , Mulher {contador_f}'
+    
+print(contador(lista_ler))       
