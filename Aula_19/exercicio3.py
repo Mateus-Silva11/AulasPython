@@ -81,3 +81,6 @@ def contador(lista_ler):
     return f' Homem {contador_m} , Mulher {contador_f}'
     
 print(contador(lista_ler))       
+
+# 4 - Faça uma função de consulta de cadastro. A função deve receber o valor do código do cliente e deve imprimir na 
+# tela os dados do cliente com f-string usando a lista do exercicio 1
