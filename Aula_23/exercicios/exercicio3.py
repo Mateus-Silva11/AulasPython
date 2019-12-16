@@ -26,7 +26,7 @@
 #  Observação: Use o try/filnaly para abrir e fechar os arquivos. Veja na aula 21- Ecessões como é!
 
 class Cadastro:
-    # Esta classe deve abrir o arquivo cadastro2.txt e guardar os cadastro numa lista com dicionários.
+   
     def ler(self):
         arquivo = open('C:\\Users\\900148\\Documents\\Dados\\GitHub\\AulasPython\\Aula_23\\exercicios\\cadastro2.txt','r')
         self.lista_dados = []
@@ -54,7 +54,7 @@ class Cadastro:
             if int(pessoa['Codigo']) == codigo:
                 print(f"{pessoa['Codigo']};{pessoa['Nome']};{pessoa['Idade']};{pessoa['Sexo']};{pessoa['Email']};{pessoa['Telefone']}")
                 break
-            
+
 
 
 
@@ -62,5 +62,5 @@ class Cadastro:
 cadastro = Cadastro()
 cadastro.ler()
 cadastro.consulta()
-# cadastro.salvar()
-# print(cadastro.ler())
+cadastro.salvar()
+print(cadastro.ler())
