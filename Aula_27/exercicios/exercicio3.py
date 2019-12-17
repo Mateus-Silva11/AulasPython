@@ -22,6 +22,8 @@ from geradorlista import binario
 # >>> lista
 # [1, 2, 3, 4, 5, 6]
 
+
+
 lista1 = [lista_simples_int() ,lista_simples_int(), lista_simples_int()]
 
 
