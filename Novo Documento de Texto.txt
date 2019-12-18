@@ -1,0 +1,38 @@
+== Igual
+!= Diferente
+> maior
+>= maior ou igual
+< menor
+<= menor ou igual
+
+And
+V|v|v
+V|F|F
+F|V|F
+F|F|F
+
+Or
+V|V|V
+V|F|V
+F|V|V
+F|F|F
+
+Not
+V|F
+F|V
+
+gustavoant.voltolini@gmail.com
+
+linguaguem html
+
+input:submit = botão
+input:text = pra digitar algo
+Label = texto do lado
+br = pula linha
+'/' = utilizado para fechar o codigio em html
+name = "" dentro do input pega os dados
+request é um dicionario
+
+
+
+

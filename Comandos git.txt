@@ -1,0 +1,10 @@
+git clone https://github.com/maykondgranemann/ExerciciosPython.git
+git branch -r
+git checkout homolog
+git checkout dev
+git branch Mateus_A_modulo1
+git status
+git add .
+git status
+git commit -m 'Resolvendo exercicios para meu lindo professor'
+git push -u origin Mateus_A_modulo1
