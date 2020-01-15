@@ -1,5 +1,7 @@
 import MySQLdb
 
+# PESSOA
+
 #Listando Todos dados da tabela
 def listar_todos(c):
     c.execute('SELECT * FROM tb_pessoa')
@@ -35,9 +37,6 @@ def deletar(cn, cr, Id_pessoa):
     cr.execute(f'DELETE FROM tb_pessoa WHERE Id_pessoa={Id_pessoa}')
     cn.commit()
 
-conexao = MySQLdb.connect(host='localhost', database='aula_bd', user='root', passwd='')
-cursor= conexao.cursor()
-
 #Comandos Para CRUD  Pessoa;
 
 # listar_todos(cursor)
@@ -49,8 +48,8 @@ cursor= conexao.cursor()
 
 
 
+# ENDEREÇO
 
-#Listando Todos dados da tabela
 
 #Lista todos os dados do endereço
 def listar_todos_endereco(cr):
@@ -59,6 +58,7 @@ def listar_todos_endereco(cr):
     endereco = cr.fetchall()
     for e  in  endereco:
         print(e)
+
 
 #Buscar pelo id_endeco
 
@@ -82,6 +82,9 @@ def alterar_endereco(cr,cn,Id_endereco,Rua,cep,bairro):
     cr.execute(f"UPDATE tb_endereco SET Id_endereco={Id_endereco} , Rua='{Rua}' , cep='{cep}' , bairro='{bairro}' where Id_endereco={Id_endereco} ")
     cn.commit()
 
+def deletar(cn, cr, Id_endereco):
+    cr.execute(f'DELETE FROM Id_endereco WHERE Id_endereco={Id_endereco}')
+    cn.commit()
 
 #CRUD Endereço
 
@@ -89,4 +92,8 @@ def alterar_endereco(cr,cn,Id_endereco,Rua,cep,bairro):
 #buscar_por_id_endereco(cursor,2)
 #buscar_por_cep(cursor,231321 )
 #salvar_endereco(cursor,conexao,3,'Rua Santa Maria','23432','Progresso')
-alterar_endereco(cursor,conexao,2,'Rua Rui Barbosa','324435','Progresso')
+# alterar_endereco(cursor,conexao,2,'Rua Rui Barbosa','324435','Progresso')
+#deletar(conexao,cursor,2)
+
+conexao = MySQLdb.connect(host='localhost', database='aula_bd', user='root', passwd='')
+cursor= conexao.cursor()

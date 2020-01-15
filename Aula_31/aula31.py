@@ -12,6 +12,7 @@
 #Pip3 install flask_mysql
 
 import MySQLdb
+
 print('-'*50)
 conexao = MySQLdb.connect(host='localhost',database='aula_bd',user='root',passwd='' )
 cursor = conexao.cursor()
