@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{titulo_app}} - Listar</title>
+    <link rel="stylesheet" href="../static/estilo.css">
+</head>
+<body>
+    <div class="conteudo">
+        <a class='btn-cadastro' href="/cadastrar">Cadastrar</a>
+        <table id='tabela-squad'>
+            <thead>
+                <tr>
+                    <th>IdSquad</th>
+                    <th>Nome</th>
+                    <th>Descricao</th>
+                    <th>NumeroPessoas</th>
+                    <th>LinguagemBackEnd</th>
+                    <th>FrameworkFrontEnd</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in lista %}
+                <tr>
+                    <td>{{ s.idSuqad }}</td>
+                    <td>{{ s.Nome }}</td>
+                    <td>{{ s.Descricao }}</td>
+                    <td>{{ s.NumeroPessoas }}</td>
+                    <td>{{ s.LinguagemBackEnd}}</td>
+                    <td>{{ s.FrameworkFrontEnd}}</td>
+                    <td>
+                        <a href="/cadastrar?id={{ s.idSquad }}" class="editar">Editar</a>
+                        <a href="/excluir?id={{ s.idSquad }} " class="excluir">Excluir</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

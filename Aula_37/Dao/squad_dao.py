@@ -29,7 +29,7 @@ class SquadDao:
             Descricao,
             NumeroPessoas,
             LinguagemBackEnd,
-            FrameworkFrontEnd
+            FrameworkFrontEnd   
         )
         VALUES
         (

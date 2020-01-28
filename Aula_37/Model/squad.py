@@ -8,4 +8,4 @@ class Squad:
         self.FrameworkFrontEnd = ''
 
     def __str__(self):
-        return f'{self.idSquad};{self.Nome};{self.Descricao};{self.NumeroPessoa};{self.LinguagemBackEnd};{self.FrameworkFronteEnde};'
+        return f'{self.idSquad};{self.Nome};{self.Descricao};{self.NumeroPessoas};{self.LinguagemBackEnd};{self.FrameworkFrontEnd}'
