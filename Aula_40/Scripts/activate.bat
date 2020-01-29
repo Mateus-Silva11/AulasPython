@@ -1,6 +1,6 @@
 @echo off
 
-set "VIRTUAL_ENV=c:\Users\900148\Desktop\GitHub\AulasPython\Pasta_Testes"
+set "VIRTUAL_ENV=C:\Users\900148\Desktop\GitHub\AulasPython\Aula_40"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
@@ -13,7 +13,7 @@ if defined _OLD_VIRTUAL_PROMPT (
     )
 )
 if not defined VIRTUAL_ENV_DISABLE_PROMPT (
-    set "PROMPT=(Pasta_Testes) %PROMPT%"
+    set "PROMPT=(Aula_40) %PROMPT%"
 )
 
 REM Don't use () to avoid problems with them in %PATH%
