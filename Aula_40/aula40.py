@@ -11,4 +11,4 @@ api.add_resource(CervejaController, '/api/cerveja')
 def inicio():
     return 'Bem vindo a API'
 
-app.run(debug=True, port=80)
+app.run(debug=True, port=4000)
