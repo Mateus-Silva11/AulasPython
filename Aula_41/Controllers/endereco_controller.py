@@ -27,10 +27,11 @@ class EnderecoController(Resource):
         cidade = request.json['cidade']
         cep = request.json['cep']
 
-        endereco = EnderecoModel(**request.json)
+        endereco = EnderecoModel(logradouro=logradouro, numero=numero,complemento=complemento,bairro=bairro,cidade=cidade,cep=cep)
         return self.dao.update(endereco)
 
     def delete(self, id):
+
         return self.dao.remove(id)
 
 

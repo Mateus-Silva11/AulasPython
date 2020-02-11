@@ -6,6 +6,7 @@ class EnderecoDao:
         self.cursor = self.connection.cursor()
         self.lista_c = ['id', 'logradouro', 'numero', 'complemento', 'bairro', 'cidade', 'cep']
 
+
     def list_all(self):
         self.cursor.execute("SELECT * FROM 01_MDG_ENDERECO")
         endereco = self.cursor.fetchall()

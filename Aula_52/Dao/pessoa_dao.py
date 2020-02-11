@@ -1,5 +1,5 @@
-from Aula52.model.pessoa_model import PessoaModel
-from Aula52.dao.base_dao import BaseDao
+from Aula_52.Model.pessoa_model import PessoaModel
+from Aula_52.Dao.base_dao import BaseDao
 
 class PessoaDao(BaseDao):
     def __init__(self):
