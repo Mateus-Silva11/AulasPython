@@ -27,8 +27,8 @@ def viagem2(pessoa1, pessoa2, origem:Local, destino:Local):
             if fortwo.set_motorista(pessoa1):
                 if fortwo.set_passageiro(pessoa2):
                     fortwo.viagem(origem, destino)
-                    if destino.entrada(pessoa1):
-                        if not destino.entrada(pessoa2):
+                    if destino.entrada(pessoa2):
+                        if not destino.entrada(pessoa1):
                             print('Não permitido6')
                     else:
                         print('Não permitido5')
@@ -41,20 +41,22 @@ def viagem2(pessoa1, pessoa2, origem:Local, destino:Local):
     else:
         print('Não permitido1')
 
+    print(f'origem: {origem.get_pessoas()}')
+    print(f'destino: {destino.get_pessoas()}')
 
 terminal = Terminal()
 aviao = Aviao()
 
-viagem2('piloto','presidiário', terminal, aviao)
+viagem2('policial','presidiário', terminal, aviao)
 viagem2('policial','', aviao, terminal)
-# viagem2('piloto','policial', Terminal(), Aviao())
-# viagem2('piloto','', Aviao(), Terminal())
-# viagem2('piloto','oficial1', Terminal(), Aviao())
-# viagem2('piloto','', Aviao(), Terminal())
-# viagem2('piloto','oficial2', Terminal(), Aviao())
-# viagem2('piloto','', Aviao(), Terminal())
-# viagem2('chefe de serviço','piloto', Terminal(), Aviao())
-# viagem2('chefe de serviço','', Aviao(), Terminal())
-# viagem2('chefe de serviço','comissário1', Terminal(), Aviao())
-# viagem2('chefe de serviço','', Aviao(), Terminal())
-# viagem2('chefe de serviço','comissário2', Terminal(), Aviao())Aviao
+viagem2('piloto','policial', terminal, aviao)
+viagem2('piloto','', aviao, terminal)
+viagem2('piloto','oficial1', terminal, aviao)
+viagem2('piloto','', aviao, terminal)
+viagem2('piloto','oficial2', terminal, aviao)
+viagem2('piloto','', aviao, terminal)
+viagem2('chefe de serviço','piloto', terminal, aviao)
+viagem2('chefe de serviço','', aviao, terminal)
+viagem2('chefe de serviço','comissário1', terminal, aviao)
+viagem2('chefe de serviço','', aviao, terminal)
+viagem2('chefe de serviço','comissário2', terminal, aviao)

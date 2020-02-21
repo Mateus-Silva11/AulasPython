@@ -44,6 +44,7 @@ class Local:
         return True
 
     def valida_entrada(self, pessoa):
+
         if len(self.__pessoas) <= 2:
             if len(self.__pessoas) == 1:
                 if pessoa != 'policial' and 'presidiário' in self.__pessoas:

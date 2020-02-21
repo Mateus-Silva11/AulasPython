@@ -25,7 +25,7 @@ class Fortwo:
 
     def __valida_regra_passageiro__(self, pessoa) -> bool:
         if self.__motorista == 'policial':
-            if pessoa == 'presidiário':
+            if pessoa == 'presidiário' or pessoa == '':
                 return True
         elif self.__motorista == 'piloto':
             if pessoa != 'comissário1' and pessoa != 'comissário2' and pessoa != 'presidiário':
@@ -42,8 +42,7 @@ class Fortwo:
         print(f"Chegando no {destino}")
         print('Finalizando a viagem ...')
         print(f'{self.__motorista} e {self.__passageiro} descem no {destino}')
-        print(f'origem: {origem.get_pessoas()}')
-        print(f'destino: {destino.get_pessoas()}')
+
 
 
 
