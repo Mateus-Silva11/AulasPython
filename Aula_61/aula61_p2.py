@@ -35,5 +35,4 @@ def solution(A,K):
         A.insert(0, b)
         A.pop()
     return A
-
 print(solution(A,K))
