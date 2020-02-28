@@ -22,21 +22,9 @@
 # e, portanto, sem lacunas binárias.
 # numero = int(input("Informe um Numero"))
 
-def binarygap(numero):
-    numero = bin(numero)
-    print(numero)
-    maior_gap = 0
-    x = 0
-    for i in numero:
-        if i == "1":
-            x = numero.index(i) + 1
-            gap = 0
-            while numero[x] < "1":
-                gap += 1
-                x += 1
-            if gap > maior_gap:
-                maior_gap = gap
-    print('{}'.format(maior_gap))
-
-binarygap(numero)
-
+def solution(N):
+    binary = bin(int(N))[2:]
+    binary = binary.split('1')
+    binary.pop()
+    return len(max(binary))
+print(solution(32))
