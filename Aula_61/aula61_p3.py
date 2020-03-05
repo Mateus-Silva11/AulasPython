@@ -38,8 +38,4 @@ def solution(A:list):
             return A[i]
         if A[i] != A[i +1]:
             return A[i]
-
-
-
-
 print(solution([9,3,9,3,9,7,9]))

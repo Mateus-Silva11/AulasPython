@@ -27,4 +27,3 @@ def solution(N):
     binary = binary.split('1')
     binary.pop()
     return len(max(binary))
-print(solution(32))
